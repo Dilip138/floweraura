@@ -78,33 +78,37 @@ class Floweraura extends Component {
                         </div> */}
 
                     <Card>
-                        <div>
+                        <div className="chocolate">
                             <h1 style={{ fontSize: '20px' }} >Chocolate Cake </h1>
                         </div>
-                        <div>
-                            <span className="priceNumber">
-                                <span className="currency"> Rs. </span>
-                                <span className="price">599</span>
-                            </span>
+                        <div className="priceNumber">
+                            <b><span className="currency"> Rs. </span>
+                                <span className="price">599</span></b>
                         </div>
-                        <div className="fiveStar-review">
-                            <div className="fiveStar">
-                                <div class="star-rating">
-                                    <StarRatings
-                                        rating={5}
-                                        starRatedColor="#f4d03f"
-                                        numberOfStars={5}
-                                        starDimension="20px"
-                                        starSpacing="0.5px"
-                                        name='rating'
-                                    />
-                                    <div className="review">
-                                        <a className="totalReview">216 Review</a>
-                                    </div>
-                                </div>
-                                <div>
-                                </div>
+                        <div class="star-rating">
+                            <StarRatings
+                                rating={5}
+                                starRatedColor="#f4d03f"
+                                numberOfStars={5}
+                                starDimension="20px"
+                                starSpacing="0.5px"
+                                name='rating'
+                            />
+                            <div className="review">
+                                <a className="totalReview">216 Review</a>
                             </div>
+                        </div>
+                        <div className="allWeight">
+                            <div>
+                                <h6 className="select-weight">Select Weight</h6>
+                            </div >
+                            <ul className="cake-weight" type="none">
+                                <li id="2" className="active">0.5 kg</li>
+                                <li id="3" className="weight-normal">1 kg</li>
+                                <li id="4" className="weight-normal">2 kg</li>
+                                <li id="5" className="weight-normal">3 kg</li>
+                                <li id="6" className="weight-normal">4 kg</li>
+                            </ul>
 
                         </div>
                     </Card>
