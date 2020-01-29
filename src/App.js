@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Floweraura from './Components/floweraura';
-// import floweraura from './Components/floweraura';
-// import './App.css';
+import './less/constant.less';
 
 function App() {
     return (
