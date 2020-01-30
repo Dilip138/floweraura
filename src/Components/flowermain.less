@@ -36,7 +36,8 @@
 }
 
 .star-rating {
-    display: flex;
+    display    : flex;
+    margin-left: @margin-left;
 }
 
 .review {
@@ -74,17 +75,17 @@
 }
 
 .active {
-    padding         : 9px 17px;
-    margin          : 0 10px 0 0;
-    font-size       : 12px;
-    border-radius   : 4px;
-    cursor          : pointer;
-    background-color: #fff;
-    font-weight     : 700;
-    display         : inline-block;
-    border          : 1px solid #888;
-    border-color    : #199100;
-    color           : #199100;
+    padding            : 9px 17px;
+    margin             : 0 10px 0 0;
+    font-size          : 12px;
+    border-radius      : 4px;
+    cursor             : pointer;
+    background-color   : #fff;
+    font-weight        : 700;
+    display            : inline-block;
+    border             : 1px solid #888;
+    // border-color    : #199100;
+    // color           : #199100;
 }
 
 .weight-normal {
@@ -97,6 +98,7 @@
     font-weight     : 700;
     display         : inline-block;
     border          : 1px solid #888;
+
 }
 
 .select-weight {
@@ -106,4 +108,36 @@
     color        : rgba(28, 33, 32, .5);
     margin-bottom: 5px;
     margin-left  : @margin-left;
+}
+
+.label {
+    font-size    : 12px;
+    line-height  : normal;
+    color        : rgba(28, 33, 32, .5);
+    margin-bottom: 5px;
+    margin-left  : @margin-left;
+}
+
+.input-design {
+    width        : 95%;
+    border       : 1px solid rgba(0, 0, 0, .5);
+    padding      : 8px 15px;
+    font-size    : 16px;
+    height       : 34px;
+    border-radius: 5px;
+    font-family  : Lato;
+    color        : rgba(28, 33, 32, .5);
+    margin-left  : @margin-left;
+    margin-top   : @margin-top;
+}
+
+.description {
+    margin-top  : 5px;
+    //width     : 100%;
+    text-align  : right;
+}
+
+.limitCharacters {
+    font-size  : 12px;
+    color        : rgba(28, 33, 32, .5);
 }

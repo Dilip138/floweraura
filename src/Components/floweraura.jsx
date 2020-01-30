@@ -24,6 +24,7 @@ const theme = createMuiTheme({
                 paddingRight: "0px"
             }
         },
+
     }
 })
 
@@ -31,9 +32,19 @@ class Floweraura extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            value: "599",
+            open: false
         }
     }
+
+    handleChangeValue(valueCake) {
+        this.setState({
+            value: valueCake,
+            open: !this.state.open
+        })
+    }
     render() {
+        //let colorWeight = this.state.open ? () : ()
         return (
             <div className="main-floweraura">
 
@@ -83,7 +94,7 @@ class Floweraura extends Component {
                         </div>
                         <div className="priceNumber">
                             <b><span className="currency"> Rs. </span>
-                                <span className="price">599</span></b>
+                                <span className="price">{this.state.value}</span></b>
                         </div>
                         <div class="star-rating">
                             <StarRatings
@@ -103,14 +114,31 @@ class Floweraura extends Component {
                                 <h6 className="select-weight">Select Weight</h6>
                             </div >
                             <ul className="cake-weight" type="none">
-                                <li id="2" className="active">0.5 kg</li>
-                                <li id="3" className="weight-normal">1 kg</li>
-                                <li id="4" className="weight-normal">2 kg</li>
-                                <li id="5" className="weight-normal">3 kg</li>
-                                <li id="6" className="weight-normal">4 kg</li>
-                            </ul>
 
+                                <li onClick={() => this.handleChangeValue(599)} id="2" className="active">0.5 kg</li>
+                                <li onClick={() => this.handleChangeValue(1099)} id="3" className="weight-normal">1 kg</li>
+                                <li onClick={() => this.handleChangeValue(1999)} id="4" className="weight-normal">2 kg</li>
+                                <li onClick={() => this.handleChangeValue(2999)} id="5" className="weight-normal">3 kg</li>
+                                <li onClick={() => this.handleChangeValue(3999)} id="6" className="weight-normal">4 kg</li>
+                            </ul>
                         </div>
+                        <form className="addForm">
+                            <div className="main_attributeBox">
+                                <div className="form-item">
+                                    <label className="label">Message on cake</label>
+                                    <input className="input-design" type="text" placeholder="Message on cake" maxLength="20" size="60" autoComplete="off"></input>
+                                </div>
+                            </div>
+                            <div className="description">
+                                <span className="limitCharacters">
+                                    Maximum limit :- 20 characters
+                                </span>
+                            </div>
+                            <div className="checkboxPrice">
+                                <input type="checkbox"></input>
+
+                            </div>
+                        </form>
                     </Card>
                 </div>
 
