@@ -10,6 +10,9 @@ import { createMuiTheme, MuiThemeProvider, } from '@material-ui/core';
 import StarRatings from 'react-star-ratings';
 import CheckIcon from '@material-ui/icons/Check';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import 'date-fns'
+import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import { Carousel } from 'react-responsive-carousel';
 import './flowermain.less';
 
@@ -34,10 +37,15 @@ class Floweraura extends Component {
         super(props)
         this.state = {
             value: "599",
-            open: false
+            open: false,
+            selectedDate: ''
         }
     }
-
+    handleDateChange(date) {
+        this.setState({
+            setSelectedDate: date
+        })
+    }
     handleChangeValue(valueCake) {
         this.setState({
             value: valueCake,
@@ -151,6 +159,25 @@ class Floweraura extends Component {
                         </form>
                     </Card>
                 </div>
+
+                {/* * --------select Date design------------  */}
+
+                <div className="selectDate-input">
+                    <form>
+                        <div className="search-selected">
+                            <h5 className="search-select">Select Delivery Date</h5>
+                        </div>
+                        {/* <MuiPickersUtilsProvider utils={DateFnsUtils}> */}
+                        <div className="serach-inputBox">
+                            <input className="searh-input" type="text" value="" placeholder="MM / dd / yyyy" ></input>
+                            <em className="showdateIcon">
+                                <img src="https://www.floweraura.com/sites/default/files/ssr/static/media/calender.40cab376.svg" />
+                            </em>
+                        </div>
+                        {/* </MuiPickersUtilsProvider> */}
+                    </form>
+                </div>
+                <div></div>
             </div>
         );
     }
