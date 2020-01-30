@@ -8,6 +8,8 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Icon, Card } from '@material-ui/core';
 import { createMuiTheme, MuiThemeProvider, } from '@material-ui/core';
 import StarRatings from 'react-star-ratings';
+import CheckIcon from '@material-ui/icons/Check';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { Carousel } from 'react-responsive-carousel';
 import './flowermain.less';
 
@@ -24,7 +26,6 @@ const theme = createMuiTheme({
                 paddingRight: "0px"
             }
         },
-
     }
 })
 
@@ -123,11 +124,9 @@ class Floweraura extends Component {
                             </ul>
                         </div>
                         <form className="addForm">
-                            <div className="main_attributeBox">
-                                <div className="form-item">
-                                    <label className="label">Message on cake</label>
-                                    <input className="input-design" type="text" placeholder="Message on cake" maxLength="20" size="60" autoComplete="off"></input>
-                                </div>
+                            <div className="form-item">
+                                <label className="label">Message on cake</label>
+                                <input className="input-design" type="text" placeholder="Message on cake" maxLength="20" size="60" autoComplete="off"></input>
                             </div>
                             <div className="description">
                                 <span className="limitCharacters">
@@ -135,14 +134,23 @@ class Floweraura extends Component {
                                 </span>
                             </div>
                             <div className="checkboxPrice">
-                                <input type="checkbox"></input>
-
+                                <div className="egglessIcon">
+                                    <span className="checkBox">
+                                        <CheckIcon className="circle" style={{ width: '19px', height: '19px' }} />
+                                    </span>
+                                    <span className="makeEggles">
+                                        <label className="label-checkbox">
+                                            Make it eggless @ Rs. 50
+                                </label>
+                                    </span>
+                                    <span className="dotIcon">
+                                        <FiberManualRecordIcon className="circle" style={{ width: '14px', height: '14px' }} />
+                                    </span>
+                                </div>
                             </div>
                         </form>
                     </Card>
                 </div>
-
-
             </div>
         );
     }
