@@ -191,6 +191,42 @@ class Floweraura extends Component {
                         <span className="enterArea">Enter your area for hassle free timely delivery.</span>
                     </div>
                 </div>
+
+                {/* * --------cake review description design------------  */}
+
+                <div className="review-description">
+                    <div className="cake-paln">
+                        <h3 className="heading">Product Contains</h3>
+                        <ul className="chocoList">
+                            <li>Choco Truffle Cake</li>
+                        </ul>
+                    </div>
+                    <div className="cake-paln">
+                        <h3 className="heading">Description</h3>
+                        <div className="sizeBox">
+                            <p className="chocolateParagraph">Indulge in the rich creamy cake overloaded with gooey chocolate.
+                                Chocolate base glazed with more melted chocolate,
+                                 crowned with Choco-bars and with cherry on top makes it too hard to resist.
+                                 This 1/2 kg freshly baked Chocolate Truffle Cake is suitable for celebrating special Birthdays,
+                              Anniversaries etc and making them more memorable.</p>
+                        </div>
+                    </div>
+                    <div className="cake-paln">
+                        <h3 className="heading">SKU Number</h3>
+                        <div className="cakeNumber">CAKE009404</div>
+                    </div>
+                    <div className="cake-paln-note">
+                        <h3 className="heading">Note</h3>
+                        <div className="cake-noteBox">
+                            The icing, design of the cake may vary from the image depending upon local availability.
+                        </div>
+                    </div>
+                </div>
+
+                {/* * -------- All cake show with price description design------------  */}
+
+                <div></div>
+
             </div>
         );
     }
