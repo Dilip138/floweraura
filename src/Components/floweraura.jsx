@@ -178,6 +178,19 @@ class Floweraura extends Component {
                     </form>
                 </div>
                 <div></div>
+
+                {/* * --------select location design------------  */}
+
+                <div className="deliverLocation">
+                    <div className="deliver">
+                        <h2 className=" deliverTo">Deliver to</h2>
+                        <span className="locationCity">Enter and Select Delivery City</span>
+                    </div>
+                    <div className="yourArea">
+                        <span className="circleI">i</span>
+                        <span className="enterArea">Enter your area for hassle free timely delivery.</span>
+                    </div>
+                </div>
             </div>
         );
     }
