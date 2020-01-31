@@ -1,0 +1,46 @@
+{
+    "cake":[
+        {
+            "image":"https://img.floweraura.com/sites/default/files/styles/product_image_new/public/Chocolate-Truffle.jpg",
+            "title":"Tempting Truffle Cak..",
+            "price":"599",
+            "description":"Earliest Delivery:",
+            "today":"Today"
+        },
+        {
+            "image":"https://img.floweraura.com/sites/default/files/styles/product_image_new/public/Black-forest-cake-1-Kg-B.jpg",
+            "title":"Choco Black Forest",
+            "price":"599",
+            "description":"Earliest Delivery:",
+            "today":"Today"
+        },
+        {
+            "image":"https://img.floweraura.com/sites/default/files/styles/product_image_new/public/Butterscotch-Cake-1-2-Kg-B.jpg",
+            "title":"Butterscotch Cake",
+            "price":"599",
+            "description":"Earliest Delivery:",
+            "today":"Today"
+        },
+        {
+            "image":"https://img.floweraura.com/sites/default/files/styles/product_image_new/public/Truffle-Magic.jpg",
+            "title":"Glazing Chocolate Be..",
+            "price":"599",
+            "description":"Earliest Delivery:",
+            "today":"Today"
+        },
+        {
+            "image":"https://img.floweraura.com/sites/default/files/styles/product_image_new/public/Rich-Chocolate-Cake.jpg",
+            "title":"Sinful Choloate Tru..",
+            "price":"699",
+            "description":"Earliest Delivery:",
+            "today":"Today"
+        },
+        {
+            "image":"https://img.floweraura.com/sites/default/files/styles/product_image_new/public/Chocolate-Cake-1-Kg-A.jpg",
+            "title":"Chocolate Truffle Cak..",
+            "price":"599",
+            "description":"Earliest Delivery:",
+            "today":"Today"
+        }
+    ]
+}

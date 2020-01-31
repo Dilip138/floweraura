@@ -14,6 +14,7 @@ import 'date-fns'
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import { Carousel } from 'react-responsive-carousel';
+import cakeData from '../Components/cake.json';
 import './flowermain.less';
 
 const theme = createMuiTheme({
@@ -225,7 +226,26 @@ class Floweraura extends Component {
 
                 {/* * -------- All cake show with price description design------------  */}
 
-                <div></div>
+                <div className="allProducts">
+                    <div className="similarProduct">
+                        <h3>Similar Products</h3>
+                        <h5>A perfect way to send smile!</h5>
+                        <div className="allContent">
+                            <div className="sliderImage">
+                                {cakeData.cake.map(key => {
+                                    return (
+                                        <div className="product-items">
+                                            {key.image}
+
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
         );
