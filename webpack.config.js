@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -20,8 +21,17 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx', '.json']
   },
+  plugins: [
+    new CopyPlugin([
+      {
+        from: 'src/Components',
+        to: 'cake',
+        toType: 'file',
+      },
+    ]),
+  ],
   output: {
     path: __dirname + '/dist',
     publicPath: '/',

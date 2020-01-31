@@ -227,16 +227,24 @@ class Floweraura extends Component {
                 {/* * -------- All cake show with price description design------------  */}
 
                 <div className="allProducts">
-                    <div className="similarProduct">
-                        <h3>Similar Products</h3>
-                        <h5>A perfect way to send smile!</h5>
+                    <div className="product">
+                        <h3 className="similarProduct">Similar Products</h3>
+                        <h5 className="perfect">A perfect way to send smile!</h5>
                         <div className="allContent">
                             <div className="sliderImage">
                                 {cakeData.cake.map(key => {
+                                    //console.log("image", key.image)
                                     return (
-                                        <div className="product-items">
-                                            {key.image}
-
+                                        <div className="pro-slider">
+                                            <div className="product-items">
+                                                <img src={key.image} style={{ height: '10em' }} />
+                                                <span className="title">{key.title}</span>
+                                                <span className="price">{key.price}</span>
+                                                <div className="earliest-delivery">
+                                                    {key.description}
+                                                    <span className="today">{key.today}</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     )
                                 })}
