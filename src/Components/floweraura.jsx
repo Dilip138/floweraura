@@ -5,7 +5,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { Icon, Card } from '@material-ui/core';
+import { Icon, Card, Divider } from '@material-ui/core';
 import { createMuiTheme, MuiThemeProvider, } from '@material-ui/core';
 import StarRatings from 'react-star-ratings';
 import CheckIcon from '@material-ui/icons/Check';
@@ -104,7 +104,7 @@ class Floweraura extends Component {
                         </div>
                         <div className="priceNumber">
                             <b><span className="currency"> Rs. </span>
-                                <span className="price">{this.state.value}</span></b>
+                                <span className="Price">{this.state.value}</span></b>
                         </div>
                         <div class="star-rating">
                             <StarRatings
@@ -227,32 +227,68 @@ class Floweraura extends Component {
                 {/* * -------- All cake show with price description design------------  */}
 
                 <div className="allProducts">
-                    <div className="product">
-                        <h3 className="similarProduct">Similar Products</h3>
-                        <h5 className="perfect">A perfect way to send smile!</h5>
-                        <div className="allContent">
-                            <div className="sliderImage">
-                                {cakeData.cake.map(key => {
-                                    //console.log("image", key.image)
-                                    return (
-                                        <div className="pro-slider">
-                                            <div className="product-items">
-                                                <img src={key.image} style={{ height: '10em' }} />
-                                                <span className="title">{key.title}</span>
-                                                <span className="price">{key.price}</span>
-                                                <div className="earliest-delivery">
-                                                    {key.description}
-                                                    <span className="today">{key.today}</span>
-                                                </div>
+                    <h3 className="similarProduct">Similar Products</h3>
+                    <h5 className="perfect">A perfect way to send smile!</h5>
+                    <div className="allContent">
+                        <div className="sliderImage">
+                            {cakeData.cake.map(key => {
+                                //console.log("image", key.image)
+                                return (
+                                    <div className="pro-slider">
+                                        <div className="product-items">
+                                            <img src={key.image} style={{ height: '10em' }} />
+                                            <span className="title">{key.title}</span>
+                                            <b><span className="price">{key.price}</span></b>
+                                            <div className="earliest-delivery">
+                                                {key.description}
+                                                <span className="today">{key.today}</span>
                                             </div>
                                         </div>
-                                    )
-                                })}
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+
+                {/* * -------- review for chocolate design------------  */}
+
+                <div className="reviewChocolate">
+                    <div className="product-review">
+                        <div className="review-box">
+                            <h2 className="reviewFor">Review For
+                                <div className="chocolate-cake">Chocolate Cake </div>
+                            </h2>
+                        </div>
+                        <div className="ratingLikes">
+                            <div className="rating">
+                                <p className="rating-section">4.6 out of 5</p>
+                            </div>
+                            <div className="likes">
+                                <p className="likes-section">93% Recommended</p>
+                            </div>
+                        </div>
+                        <Divider style={{ margin: "0.5em -1em 0em -1em" }} />
+                        <div className="review-list">
+                            <div className="view-content">
+                                <div className="view-list-recommended">
+                                    <h3 className="name">
+                                        Khushdeep
+                                    <span>(MOHALI)</span>
+                                    </h3>
+                                    <div className="rate-recommented">
+                                        <h6>Rating and Review</h6>
+                                        <div className="rating-fiveStar"></div>
+                                        <div className="recommended"></div>
+                                        <p className="rating-desc">
+                                            <span>Read  more</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                     </div>
-
                 </div>
 
             </div>
