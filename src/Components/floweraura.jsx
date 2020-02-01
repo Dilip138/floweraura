@@ -15,6 +15,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import { Carousel } from 'react-responsive-carousel';
 import cakeData from '../Components/cake.json';
+import rateDescData from '../Components/rateDesc.json';
 import './flowermain.less';
 
 const theme = createMuiTheme({
@@ -271,20 +272,33 @@ class Floweraura extends Component {
                         <Divider style={{ margin: "0.5em -1em 0em -1em" }} />
                         <div className="review-list">
                             <div className="view-content">
-                                <div className="view-list-recommended">
-                                    <h3 className="name">
-                                        Khushdeep
-                                    <span>(MOHALI)</span>
-                                    </h3>
-                                    <div className="rate-recommented">
-                                        <h6>Rating and Review</h6>
-                                        <div className="rating-fiveStar"></div>
-                                        <div className="recommended"></div>
-                                        <p className="rating-desc">
-                                            <span>Read  more</span>
-                                        </p>
-                                    </div>
-                                </div>
+                                {rateDescData.description.map(data => {
+                                    return (
+                                        <div className="view-list-recommended">
+                                            <h3 className="name">
+                                                {data.name}
+                                                <span className="city">{data.city}</span>
+                                            </h3>
+                                            <div className="rate-recommented">
+                                                <h6 className="rating-review">Rating and Review</h6>
+                                                <div className="rating-fiveStar">
+                                                    <span ><img src={data.image} className="fill-star" /></span>
+                                                    <span ><img src={data.image} className="fill-star"/></span>
+                                                    <span ><img src={data.image} className="fill-star"/></span>
+                                                    <span ><img src={data.image} className="fill-star"/></span>
+                                                    <span ><img src={data.image} className="fill-star"/></span>
+                                                </div>
+                                                <div className="read-desc">
+                                                    <span className="recommended">Recommended</span>
+
+                                                </div>
+                                            </div>
+                                            <p className="rating-desc">{data.desc}
+                                                <span className="read-more">Read  more</span>
+                                            </p>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
 

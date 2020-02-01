@@ -1,4 +1,5 @@
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack')
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -6,7 +7,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        loaders: ["babel-loader"]
       },
       {
         test: /\.(less)$/,
@@ -30,7 +31,13 @@ module.exports = {
         to: 'cake',
         toType: 'file',
       },
+      {
+        from: 'src/Components',
+        to: 'rateDesc',
+        toType: 'file',
+      },
     ]),
+   new webpack.HotModuleReplacementPlugin()
   ],
   output: {
     path: __dirname + '/dist',
