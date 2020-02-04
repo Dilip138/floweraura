@@ -44,6 +44,8 @@ class Floweraura extends Component {
             open: false,
             click: false,
             click1: false,
+            click2: false,
+            click3: false,
             selectedDate: ''
         }
     }
@@ -67,6 +69,16 @@ class Floweraura extends Component {
     handleIconChange1() {
         this.setState({
             click1: !this.state.click1
+        })
+    }
+    handleIconChange2() {
+        this.setState({
+            click2: !this.state.click2
+        })
+    }
+    handleIconChange3() {
+        this.setState({
+            click3: !this.state.click3
         })
     }
     render() {
@@ -328,12 +340,12 @@ class Floweraura extends Component {
                         {!this.state.click ?
                             (<div className="occasionArrow">
                                 <div className="byOccasion">By Occasion</div>
-                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange()} /> </div>
+                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange()} style={{ cursor: 'pointer' }} /> </div>
                             </div>) :
                             (<div>
                                 <div className="occasionArrow">
                                     <div className="byOccasion">By Occasion</div>
-                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange()} /> </div>
+                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange()} style={{ cursor: 'pointer' }} /> </div>
                                 </div>
                                 <div className="birthday">Birthday</div>
                                 <Divider />
@@ -345,12 +357,12 @@ class Floweraura extends Component {
                         {!this.state.click1 ?
                             (<div className="occasionArrow">
                                 <div className="byOccasion">Upcoming Celebrations</div>
-                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange1()} /> </div>
+                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange1()} style={{ cursor: 'pointer' }} /> </div>
                             </div>) :
                             (<div>
                                 <div className="occasionArrow">
                                     <div className="byOccasion">Upcoming Celebrations</div>
-                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange1()} /> </div>
+                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange1()} style={{ cursor: 'pointer' }} /> </div>
                                 </div>
                                 <div className="birthday">Christmas</div>
                                 <Divider />
@@ -368,8 +380,66 @@ class Floweraura extends Component {
                             </div>)}
 
                         <Divider />
-                    </div>
 
+                        {!this.state.click2 ?
+                            (<div className="occasionArrow">
+                                <div className="byOccasion">Top Searches</div>
+                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange2()} style={{ cursor: 'pointer' }} /> </div>
+                            </div>) :
+                            (<div>
+                                <div className="occasionArrow">
+                                    <div className="byOccasion">Top Searches</div>
+                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange2()} style={{ cursor: 'pointer' }} /> </div>
+                                </div>
+                                <div className="birthday">Eggless Cakes</div>
+                                <Divider />
+                                <div className="birthday">Teddy Bear</div>
+                                <Divider />
+
+                            </div>)}
+
+                        <Divider />
+
+                        {!this.state.click3 ?
+                            (<div className="occasionArrow">
+                                <div className="byOccasion">Cake Top Cities</div>
+                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange3()} style={{ cursor: 'pointer' }} /> </div>
+                            </div>) :
+                            (<div>
+                                <div className="occasionArrow">
+                                    <div className="byOccasion">Cake Top Cities</div>
+                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange3()} style={{ cursor: 'pointer' }} /> </div>
+                                </div>
+                                <div className="birthday">Cakes to Bangalore</div>
+                                <Divider />
+                                <div className="birthday">Cakes to Delhi</div>
+                                <Divider />
+                                <div className="birthday">Cakes to Gurgaon</div>
+                                <Divider />
+                                <div className="birthday">Cakes to Kolkata</div>
+                                <Divider />
+                                <div className="birthday">Cakes to Mumbai</div>
+                                <Divider />
+
+                            </div>)}
+
+                        <Divider style={{marginBottom:'10px'}} />
+                    </div>
+                </div>
+
+                {/* * -------- footer design------------  */}
+
+                <div className="footer">
+                    <div className="footer-description">
+                        <ul className="list">
+                            <li>Terms</li>
+                            <li className="cancellation">Cancellation</li>
+                            <li className="privacy-policy">Privacy-Policy</li>
+                        </ul>
+                    </div>
+                    <Divider />
+                    <div className="copyright">Copyright 2020 Floweraura</div>
+                    <div className="allRight">All right reserved</div>
                 </div>
 
             </div>
