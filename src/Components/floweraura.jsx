@@ -14,6 +14,8 @@ import 'date-fns'
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import { Carousel } from 'react-responsive-carousel';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import cakeData from '../Components/cake.json';
 import rateDescData from '../Components/rateDesc.json';
 import './flowermain.less';
@@ -40,6 +42,8 @@ class Floweraura extends Component {
         this.state = {
             value: "599",
             open: false,
+            click: false,
+            click1: false,
             selectedDate: ''
         }
     }
@@ -52,6 +56,17 @@ class Floweraura extends Component {
         this.setState({
             value: valueCake,
             open: !this.state.open
+        })
+    }
+    handleIconChange() {
+        this.setState({
+            click: !this.state.click
+        })
+
+    }
+    handleIconChange1() {
+        this.setState({
+            click1: !this.state.click1
         })
     }
     render() {
@@ -283,10 +298,10 @@ class Floweraura extends Component {
                                                 <h6 className="rating-review">Rating and Review</h6>
                                                 <div className="rating-fiveStar">
                                                     <span ><img src={data.image} className="fill-star" /></span>
-                                                    <span ><img src={data.image} className="fill-star"/></span>
-                                                    <span ><img src={data.image} className="fill-star"/></span>
-                                                    <span ><img src={data.image} className="fill-star"/></span>
-                                                    <span ><img src={data.image} className="fill-star"/></span>
+                                                    <span ><img src={data.image} className="fill-star" /></span>
+                                                    <span ><img src={data.image} className="fill-star" /></span>
+                                                    <span ><img src={data.image} className="fill-star" /></span>
+                                                    <span ><img src={data.image} className="fill-star" /></span>
                                                 </div>
                                                 <div className="read-desc">
                                                     <span className="recommended">Recommended</span>
@@ -303,6 +318,58 @@ class Floweraura extends Component {
                         </div>
 
                     </div>
+                </div>
+
+                {/* * -------- All quick links design------------  */}
+
+                <div className="allOccasion">
+                    <div className="occasionDetails">
+                        <h3>Quick Links</h3>
+                        {!this.state.click ?
+                            (<div className="occasionArrow">
+                                <div className="byOccasion">By Occasion</div>
+                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange()} /> </div>
+                            </div>) :
+                            (<div>
+                                <div className="occasionArrow">
+                                    <div className="byOccasion">By Occasion</div>
+                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange()} /> </div>
+                                </div>
+                                <div className="birthday">Birthday</div>
+                                <Divider />
+                                <div className="birthday">Anniversary</div>
+                                <Divider />
+                            </div>)}
+                        <Divider />
+
+                        {!this.state.click1 ?
+                            (<div className="occasionArrow">
+                                <div className="byOccasion">Upcoming Celebrations</div>
+                                <div className="iconDown"> <KeyboardArrowDownIcon onClick={() => this.handleIconChange1()} /> </div>
+                            </div>) :
+                            (<div>
+                                <div className="occasionArrow">
+                                    <div className="byOccasion">Upcoming Celebrations</div>
+                                    <div className="iconDown"> <KeyboardArrowUpIcon onClick={() => this.handleIconChange1()} /> </div>
+                                </div>
+                                <div className="birthday">Christmas</div>
+                                <Divider />
+                                <div className="birthday">New Year</div>
+                                <Divider />
+                                <div className="birthday">Valentine Day</div>
+                                <Divider />
+                                <div className="birthday">Womens Day</div>
+                                <Divider />
+                                <div className="birthday">Holi</div>
+                                <Divider />
+                                <div className="birthday">Lohri</div>
+                                <Divider />
+
+                            </div>)}
+
+                        <Divider />
+                    </div>
+
                 </div>
 
             </div>
