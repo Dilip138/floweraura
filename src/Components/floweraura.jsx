@@ -19,6 +19,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import cakeData from '../Components/cake.json';
 import rateDescData from '../Components/rateDesc.json';
 import './flowermain.less';
+import { green, grey } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
     overrides: {
@@ -46,6 +47,7 @@ class Floweraura extends Component {
             click1: false,
             click2: false,
             click3: false,
+            color:false,
             selectedDate: ''
         }
     }
@@ -57,7 +59,8 @@ class Floweraura extends Component {
     handleChangeValue(valueCake) {
         this.setState({
             value: valueCake,
-            open: !this.state.open
+            open: !this.state.open,
+            color:!this.state.color
         })
     }
     handleIconChange() {
@@ -153,7 +156,7 @@ class Floweraura extends Component {
                             </div >
                             <ul className="cake-weight" type="none">
 
-                                <li onClick={() => this.handleChangeValue(599)} id="2" className="active">0.5 kg</li>
+                                <li style={{borderColor:this.state.color ? 'gray' : 'green'}} onClick={() => this.handleChangeValue(599)} id="2" className="active">0.5 kg</li>
                                 <li onClick={() => this.handleChangeValue(1099)} id="3" className="weight-normal">1 kg</li>
                                 <li onClick={() => this.handleChangeValue(1999)} id="4" className="weight-normal">2 kg</li>
                                 <li onClick={() => this.handleChangeValue(2999)} id="5" className="weight-normal">3 kg</li>
