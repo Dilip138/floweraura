@@ -47,7 +47,7 @@ class Floweraura extends Component {
             click1: false,
             click2: false,
             click3: false,
-            color:false,
+            color: false,
             selectedDate: ''
         }
     }
@@ -60,7 +60,7 @@ class Floweraura extends Component {
         this.setState({
             value: valueCake,
             open: !this.state.open,
-            color:!this.state.color
+            color: !this.state.color
         })
     }
     handleIconChange() {
@@ -156,8 +156,8 @@ class Floweraura extends Component {
                             </div >
                             <ul className="cake-weight" type="none">
 
-                                <li style={{borderColor:this.state.color ? 'gray' : 'green'}} onClick={() => this.handleChangeValue(599)} id="2" className="active">0.5 kg</li>
-                                <li onClick={() => this.handleChangeValue(1099)} id="3" className="weight-normal">1 kg</li>
+                                <li style={{ borderColor: this.state.color ? 'gray' : 'green', color: this.state.color ? 'gray' : 'green' }} onClick={() => this.handleChangeValue(599)} id="2" className="active">0.5 kg</li>
+                                <li style={{ borderColor: this.state.color ? 'green' : 'gray', color: this.state.color ? 'green' : 'gray' }} onClick={() => this.handleChangeValue(1099)} id="3" className="weight-normal">1 kg</li>
                                 <li onClick={() => this.handleChangeValue(1999)} id="4" className="weight-normal">2 kg</li>
                                 <li onClick={() => this.handleChangeValue(2999)} id="5" className="weight-normal">3 kg</li>
                                 <li onClick={() => this.handleChangeValue(3999)} id="6" className="weight-normal">4 kg</li>
@@ -426,7 +426,7 @@ class Floweraura extends Component {
 
                             </div>)}
 
-                        <Divider style={{marginBottom:'10px'}} />
+                        <Divider style={{ marginBottom: '10px' }} />
                     </div>
                 </div>
 
