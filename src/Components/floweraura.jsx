@@ -51,11 +51,6 @@ class Floweraura extends Component {
             selectedDate: ''
         }
     }
-    handleDateChange(date) {
-        this.setState({
-            setSelectedDate: date
-        })
-    }
     handleChangeValue(valueCake) {
         this.setState({
             value: valueCake,
